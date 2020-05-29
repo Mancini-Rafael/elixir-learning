@@ -1,8 +1,21 @@
-# Description
-- List of simple programming language projects that I do for every new language I try to learn.
+# Learning
 
-## The problems come from this [link](https://adriann.github.io/programming_problems.html) (Credit goes to [author](https://adriann.github.io))
+**TODO: Add description**
 
-- How to use
-  - ```docker build . -t elixir_learning:latest```
-  - ```docker run --rm -it -v `pwd`:"/learning/" elixir_learning <command>```
+## Installation
+
+If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+by adding `learning` to your list of dependencies in `mix.exs`:
+
+```elixir
+def deps do
+  [
+    {:learning, "~> 0.1.0"}
+  ]
+end
+```
+
+Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
+and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
+be found at [https://hexdocs.pm/learning](https://hexdocs.pm/learning).
+
