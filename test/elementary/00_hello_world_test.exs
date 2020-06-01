@@ -4,7 +4,7 @@ defmodule HelloWorldTest do
 
   test "greets the world" do
     assert capture_io(fn ->
-      HelloWorld.hello_world()
-    end) == "Hello World\n"
+             HelloWorld.hello_world()
+           end) == "Hello World\n"
   end
 end

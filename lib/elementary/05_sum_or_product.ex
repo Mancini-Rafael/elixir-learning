@@ -1,8 +1,10 @@
 defmodule SumOrProduct do
   def operate do
-    operation = IO.gets("What is the type of operation? (sum | multiply) ") 
-      |> to_string() 
+    operation =
+      IO.gets("What is the type of operation? (sum | multiply) ")
+      |> to_string()
       |> String.trim()
+
     cond do
       operation == "sum" -> run_sum()
       operation == "multiply" -> run_mult()
@@ -12,28 +14,35 @@ defmodule SumOrProduct do
 
   def run_sum() do
     number = IO.gets("What is the number? ") |> Integer.parse()
+
     cond do
-      number != :error -> 
-        (1..elem(number, 0)) 
-        |> Enum.to_list() 
-        |> Enum.sum() 
+      number != :error ->
+        1..elem(number, 0)
+        |> Enum.to_list()
+        |> Enum.sum()
         |> print_value()
-      true -> IO.puts("This value is not a valid integer")
-    end
-  end
-  def run_mult() do
-    number = IO.gets("What is the number? ") |> Integer.parse()
-    cond do
-      number != :error -> 
-        (1..elem(number, 0)) |> Enum.to_list() |> multiply_numbers() |> print_value()
-      true -> IO.puts("This value is not a valid integer")
+
+      true ->
+        IO.puts("This value is not a valid integer")
     end
   end
 
+  def run_mult() do
+    number = IO.gets("What is the number? ") |> Integer.parse()
+
+    cond do
+      number != :error ->
+        1..elem(number, 0) |> Enum.to_list() |> multiply_numbers() |> print_value()
+
+      true ->
+        IO.puts("This value is not a valid integer")
+    end
+  end
 
   def multiply_numbers([]) do
     1
   end
+
   def multiply_numbers([h | t]) do
     h * multiply_numbers(t)
   end
@@ -41,5 +50,4 @@ defmodule SumOrProduct do
   def print_value(n) do
     IO.puts("The result is #{n}")
   end
-
 end

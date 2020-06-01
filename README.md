@@ -8,5 +8,7 @@
   - ```docker run --rm -it -v `pwd`:"/learning/" elixir_learning bash```
 
 - Testing
-  - ```docker run --rm -it elixir_learning bash```
-  - ```mix test```
+  - ```docker run --rm -it elixir_learning test```
+
+- Linting
+  - ```docker run --rm -it elixir_learning lint```
