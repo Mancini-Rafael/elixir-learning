@@ -1,9 +1,9 @@
 defmodule GreeterTest do
   use ExUnit.Case
   import ExUnit.CaptureIO
-  doctest Greeter
 
-  test "greets the user with his name" do
-    assert capture_io(fn -> Greeter.greet("Rafael") end) == "Hello Rafael\n"
+  test "Prompts the user for his name, and greets him" do
+    assert capture_io([input: "Rafael", capture_prompt: true], 
+      fn -> Greeter.greet() end) == "What is your name? Hello Rafael\n"
   end
 end

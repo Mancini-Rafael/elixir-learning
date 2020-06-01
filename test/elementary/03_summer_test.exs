@@ -1,7 +1,6 @@
 defmodule SummerTest do
   use ExUnit.Case
   import ExUnit.CaptureIO
-  doctest Summer
 
   setup do
     [list: [1,2,3,4,5]]

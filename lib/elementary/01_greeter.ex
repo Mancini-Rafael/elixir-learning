@@ -1,13 +1,6 @@
 defmodule Greeter do
-  @moduledoc """
-  Documentation for `HelloWorld`.
-  """
-
-  @doc """
-  HelloWorld.hello_word
-  -> 'Hello World'
-  """
-  def greet(name) do
+  def greet do
+    name = IO.gets("What is your name? ")
     IO.puts("Hello #{name}")
   end
 end
